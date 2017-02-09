@@ -14,4 +14,5 @@ public abstract class AbstractSoldier implements Soldier {
 	public boolean isAlive(){
 		return health>0;
 	}
+	
 }

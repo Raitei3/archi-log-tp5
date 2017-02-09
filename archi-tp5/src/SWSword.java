@@ -1,13 +1,15 @@
 
 public class SWSword extends Decorator {
-	double swordAtt;
+	private static final int SWORD_ATT = 3;
 	
 	public SWSword(Soldier soldier){
-		super(soldier);
-		swordAtt = 3;
+		super(soldier, 20);
 	}
 	
 	public double strike(){
-		return soldier.strike()+swordAtt;
+		if(_durability<=0){
+			return super.strike();
+		}
+		return super.strike()+SWORD_ATT;
 	}
 }
