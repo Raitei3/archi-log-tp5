@@ -2,16 +2,21 @@
 public abstract class AbstractSoldier implements Soldier {
 
 	double attack;
-	double health;
+	int health;
 	double def;
 
 	public AbstractSoldier(){
 		health = 10;
-		attack = 3;
-		def = 2;
+		attack = 5;
+		def = 3;
 	}
 
 	public boolean isAlive(){
 		return health>0;
 	}
+	
+	public int getHealth(){
+		return this.health;
+	}
+	
 }

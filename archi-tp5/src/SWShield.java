@@ -1,15 +1,18 @@
 
 public class SWShield extends Decorator {
 	
-	double defend;
+	private static final int DEFENSE = 2;
 	
 	public SWShield(Soldier soldier){
-		super(soldier);
-		defend =2;
+		super(soldier, 20);
 	}
 	
 	public void parry(double att){
-		soldier.parry(att/2);
+		if(_durability <= 0){
+			soldier.parry(att);
+		}else{
+		super.parry(att/DEFENSE);
+		}
 	}
 
 }
