@@ -10,7 +10,7 @@ public class SWSword extends Decorator {
 		if(_durability<=0){
 			return super.strike();
 		}
-		
 		return super.strike()+SWORD_ATT;
 	}
 }
+
