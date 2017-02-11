@@ -6,6 +6,7 @@ public class SWShield extends Decorator {
 	
 	public SWShield(Soldier soldier){
 		super(soldier);
+		SHdurability = 20;
 	}
 	
 	public void parry(double att){

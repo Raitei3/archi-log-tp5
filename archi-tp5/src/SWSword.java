@@ -5,13 +5,13 @@ public class SWSword extends Decorator {
 	
 	public SWSword(Soldier soldier){
 		super(soldier);
+		SWdurability = 20;
 	}
 	
 	public double strike(){
 		if(SWdurability<=0){
 			return super.strike();
 		}
-		//System.out.println(super.strike()+SWORD_ATT);
 		SWdurability -= decreaseDurability(super.strike()+SWORD_ATT, SWdurability);
 		return super.strike()+SWORD_ATT;
 	}

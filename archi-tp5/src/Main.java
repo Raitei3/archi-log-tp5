@@ -11,13 +11,14 @@ public class Main {
 	System.out.println(im.getHealth());
 	
 	im.parry(hm.strike());
-	System.out.println(im.getHealth());
+	System.out.println("im"+im.getHealth());
 	
 	SWShield shieldHm = new SWShield(hm);
 	SWSword swordIm = new SWSword(im);
 	
 	shieldHm.parry(swordIm.strike());
-	System.out.println(shieldHm.getHealth());
+	//System.out.println("im tape a "+ swordIm.strike());
+	System.out.println("hm"+shieldHm.getHealth());
 	
 	SWShield SWIm = new SWShield(swordIm);
 	SWSword SWHm = new SWSword(shieldHm);
