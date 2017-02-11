@@ -7,7 +7,7 @@ public class InfantryMan extends AbstractSoldier  {
 	}
 	
 	public double strike(){
-		return attack * Math.log(1+health);
+		return attack * Math.log10(1+health);
 	}
 	
 	public void parry(double att){

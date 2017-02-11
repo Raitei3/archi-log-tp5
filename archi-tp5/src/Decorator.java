@@ -1,22 +1,22 @@
 
 public abstract class Decorator implements Soldier {
 	protected Soldier soldier;
-	protected double _durability;
+	//protected double _durability;
 	
-	public Decorator(Soldier soldier, double durability){
+	public Decorator(Soldier soldier){
 		this.soldier=soldier;
-		this._durability=durability;
+		//this._durability=durability;
 	}
 	
 	
 	public double strike(){
-		decreaseDurability(soldier.strike());
+		//decreaseDurability(soldier.strike());
 		return soldier.strike();
 	}
 	
 	public  void parry(double x){
 		soldier.parry(x);
-		decreaseDurability(x);
+		//decreaseDurability(x);
 	}
 
 	public boolean isAlive() {
@@ -27,8 +27,8 @@ public abstract class Decorator implements Soldier {
 		return soldier.getHealth();
 	}
 	
-	public void decreaseDurability(double damages){
-		_durability =12*(Math.min(_durability, damages) / _durability);
+	public double decreaseDurability(double damages,double durability){
+		return 12*(Math.min(durability, damages) / durability);
 	}
 
 }

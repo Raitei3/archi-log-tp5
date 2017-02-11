@@ -7,13 +7,27 @@ public class Main {
 	public static void main(String[] args){
 	Soldier hm = new HorseMan();
 	Soldier im = new InfantryMan();
+	System.out.println(hm.getHealth());
+	System.out.println(im.getHealth());
+	
 	im.parry(hm.strike());
 	System.out.println(im.getHealth());
+	
 	SWShield shieldHm = new SWShield(hm);
 	SWSword swordIm = new SWSword(im);
+	
 	shieldHm.parry(swordIm.strike());
 	System.out.println(shieldHm.getHealth());
-	//fight(hm,im);
+	
+	SWShield SWIm = new SWShield(swordIm);
+	SWSword SWHm = new SWSword(shieldHm);
+	
+	SWIm.parry(SWHm.strike());
+	SWHm.parry(SWIm.strike());
+	System.out.println("final IM "+SWIm.getHealth());
+	System.out.println("final HM "+SWHm.getHealth());
+	fight(SWHm,SWIm);
+	
 		
 		
 	}

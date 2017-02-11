@@ -8,7 +8,7 @@ public abstract class AbstractSoldier implements Soldier {
 	public AbstractSoldier(){
 		health = 10;
 		attack = 5;
-		def = 3;
+		def = 2;
 	}
 
 	public boolean isAlive(){
